@@ -1,0 +1,9 @@
+<ul *ngIf="companyList.length>0">
+  <li *ngFor="let company of companyList">
+    <a [routerLink]="['/company-view',company.companyId]">
+    <p class="w-50">name: {{company.companyName}}</p>
+    </a>
+  </li>
+</ul>
+<h3 *ngIf="companyList.length==0" class="text-center">Not Found</h3>
+<a [routerLink]="['/company-add']">Add</a>

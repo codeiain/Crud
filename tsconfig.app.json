@@ -9,6 +9,12 @@
     "src/polyfills.ts"
   ],
   "include": [
-    "src/**/*.d.ts"
+    "src/**/*.d.ts",
+    "src/app/api/company/*.ts",
+    "src/app/api/company/services/**/*.ts",
+    "src/app/api/company/models/**/*.ts",
+    "src/app/api/invoice/*.ts",
+    "src/app/api/invoice/services/**/*.ts",
+    "src/app/api/invoice/models/**/*.ts",
   ]
 }

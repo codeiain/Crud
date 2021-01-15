@@ -1,0 +1,12 @@
+<div *ngIf="company">
+  <p>Name: {{ company.companyName }}</p>
+  <div *ngIf="company.companyAddress">
+    <p>Address 1: {{ company.companyAddress.addressLine1 }}</p>
+    <p>Address 2: {{ company.companyAddress.addressLine2 }}</p>
+    <p>Street: {{ company.companyAddress.addressStreet }}</p>
+    <p>Country: {{ company.companyAddress.addressCountry }}</p>
+    <p>Postcode: {{ company.companyAddress.addressPostCode }}</p>
+  </div>
+  <a [routerLink]="['/company-edit', company.companyId]">Edit</a>
+  <a [routerLink]="['/companies']">Back</a>
+</div>

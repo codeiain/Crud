@@ -1,0 +1,56 @@
+<section class="page-section">
+<form [formGroup]="form">
+  <div class="form-group">
+      <input
+          type="text"
+          class="form-control w-100"
+          formControlName="name"
+          name="name"
+          placeholder="Name">
+  </div>
+  <div class="form-group">
+    <input
+        type="text"
+        class="form-control w-100"
+        formControlName="addressLine1"
+        name="addressLine1"
+        placeholder="Address Line1">
+</div>
+<div class="form-group">
+  <input
+      type="text"
+      class="form-control w-100"
+      formControlName="addressLine2"
+      name="addressLine2"
+      placeholder="Address Line2">
+</div>
+<div class="form-group">
+  <input
+      type="text"
+      class="form-control w-100"
+      formControlName="street"
+      name="street"
+      placeholder="Street">
+</div>
+<div class="form-group">
+  <input
+      type="text"
+      class="form-control w-100"
+      formControlName="country"
+      name="country"
+      placeholder="Country">
+</div>
+<div class="form-group">
+  <input
+      type="text"
+      class="form-control w-100"
+      formControlName="postcode"
+      name="postcode"
+      placeholder="Post Code">
+</div>
+<button (click)="save()">Save</button>
+
+<a *ngIf="companyResult?.companyId" [routerLink]="['/company-view', companyResult.companyId]">Back</a>
+<a *ngIf="!companyResult?.companyId" [routerLink]="['/companies']">Back</a>
+</form>
+</section>
